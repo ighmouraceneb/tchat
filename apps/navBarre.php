@@ -1,1 +1,1 @@
-<?php require('view/navBarre.phtml'); ?>
+<?php require('views/navBarre.phtml'); ?>

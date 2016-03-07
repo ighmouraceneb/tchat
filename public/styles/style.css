@@ -1,102 +1,110 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+html{ 
+   background: url(../images/bg1.png) no-repeat center fixed ; 
+   
+   margin:0;
+   padding:0;
+   background-size: cover;
+
+
 }
 
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+.msg{
+  margin-top: 10%;
+  margin-left: 30%;
+  
+}
+/*---------------------NAVBARRE---------------------*/
 
-body > .container {
-  padding: 60px 15px 0;
+header .navBarre {
+  background-color: #464646;
 }
-.container .text-muted {
-  margin: 20px 0;
-}
+/* FIXED NAV HAUT PAGE */
+header .opacity {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(70,70,70,1.0);
+} 
+header.tailleFixed {
+  height: 155px;
+} 
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-.list-group
-{
-  max-height:680px;
-  overflow-y:auto;
-}
-.panel-heading
-{
-  text-align:center;
-}
-.ticketform
-{
-  position:absolute;
-  right:5px;
-  top:10px;
-}
-.ticket
-{
-  min-height:82px;
-}
-.addticket
-{
-  position:absolute;
-  left:20px;
-  top:4px;
+header .navBarre ul {
+  font-size: 0px;
+  text-decoration: none!important;
 }
 
-.dropdown-menu{
-  min-width: 0px;
+header .navBarre li{
+  font-size: 20px;
 }
 
-.classWithPad { 
-  padding:10px; 
-  border-radius: 15px;
-  border: 0.5px solid blue;
+.navBarre a{
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  
+  display: block;
+  padding: 15px ;
+  font-size: 15px; 
+  border-bottom: 5px solid  rgb(248, 248, 248);
+  
+  width: 200px;
 }
 
-label {
-  display: inline-block;
+a:hover{
+  color: #555;
+  background: rgb(248, 248, 248);
+  text-decoration: none;
 }
 
-article > img {
-  width: 100%;
+.navBarre li .buttonLogout {
+  text-decoration: none;
+  background-color: #fff;
+
+  color: #ffffff);
+  margin-right: 10px;
 }
 
-button {
-  border-radius: 10px;
+.navBarre button {
+  background-color: none;
+  text-decoration: none;
+  border: none;
 }
 
-.textarea {
-  width: 100%;
+.navBarre .buttonLogout:hover {
+  color: rgba(229,43,86,1);
 }
 
-.article {
-  background: rgba(255,255,255,0.6);
-  margin-bottom: 25px; 
-  padding: 5px;
-  border-radius: 5px;
+.navBarre li .detailProfil {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
 }
 
-ul {
-  list-style-type: none;
+.navBarre .detailProfil:hover {
+  color: rgba(43,226,184,1);
 }
+/* NAV BARRE MENU DEROULANT */
+    .profilNavbar{
+      margin-left: 50%;
+    }
+
+    .navBarre ul li{
+      position: relative;
+
+    }
+
+    .navBarre ul ul{
+      position: absolute;
+      top: 100%;
+      left: -25px;
+      /*border:1px solid rgba(141,175,214,1);*/
+      display: none;
+      background: 
+    }
+
+    .navBarre ul li:hover > ul{
+      display: block;
+      z-index: 3;
+    }
