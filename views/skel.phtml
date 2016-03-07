@@ -1,5 +1,43 @@
-<?php
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Gestionnaite ticket</title>
 
-require('apps/home.php');
+	    
 
-?>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    
+	    <!-- Latest compiled and minified CSS -->
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+		<link href="PUBLIC/CSS/style.css" rel="stylesheet">
+	    <link href="PUBLIC/CSS/styleNew.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	    <script type="text/javascript" src="PUBLIC/SCRIPT/createTicket.js"></script>
+
+
+	</head>
+	<body>	
+		<div class="container">
+			<div class="row row-header">
+				<?php require('apps/header.php'); ?>
+			</div>
+			<div class="row">
+				<?php require('apps/content.php'); ?>
+			</div>
+			<div class="row">
+				<?php require('apps/footer.php'); ?>
+			</div>
+		</div>
+
+
+
+
+	</body>
+</html>
