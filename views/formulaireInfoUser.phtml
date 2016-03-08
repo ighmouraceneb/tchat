@@ -1,0 +1,22 @@
+
+<div class="form-style-10">
+		<h1>Modification<br>informations personnelles</h1>
+		<form method="POST">
+				<div class="section">Login &amp; Mot de passe</div>
+		    	<div class="inner-wrap">
+					<?=htmlentities($error)?>
+					<label for="loginId">Login</label>
+					<input type="text" name="login" id="loginId" >
+					<?=htmlentities($error)?>
+					<label for="password">email</label>
+					<input type="password" name="password" >
+				</div>
+			
+				<div class="button-section">
+					<button type="submit" name="action" value="information">valider</button>
+					<span class="privacy-policy">
+	   			    <input type="checkbox" name="field7">Vous acceptez de modifier vos imformations. 
+	     			</span>
+				</div>
+		</form>
+	</div>

@@ -5,7 +5,7 @@
 
 session_start();
 
-$db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
+$db = @mysqli_connect("localhost", "root", "", "tchatchatchat");
 
 $page = "home";
 $access_page = ['home'];
