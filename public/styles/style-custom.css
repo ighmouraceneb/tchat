@@ -1,0 +1,118 @@
+html{
+	font-size: 62.5%;
+}
+
+body{
+	-webkit-background-size: cover;
+	background-size: cover;
+	/*background: #0F0F0F;*/
+	/*background: #000;*/
+	background: url(../images/bg-3.jpg) no-repeat;
+	color: #6D6C6C;
+}
+
+.container{
+	/*background: #000;*/
+	/* background: #0F0F0F; */
+	background: rgba(255,255,255,0.5);
+	margin-top: 100px;
+	padding: 20px !important;
+	padding-bottom: 50px !important;
+
+}
+
+img{
+	max-width: 100%;
+/*	width: 100px ;
+	height: 100px ;*/
+}
+
+h1{
+	background: rgba(255,255,255,0.6);
+	padding: 10px 5px;
+}
+
+
+.bg-text{
+	/*border: 1px solid #ccc;*/
+	background: rgba(255,255,255,0.6);
+	display: inline-block;
+	padding: 0 10px;
+}
+
+/*b {
+	color: #fff;
+}*/
+
+
+.login{
+	max-width: 500px;
+	margin: 50px auto;
+	background: rgba(0,0,0,0.7);
+	border-radius: 6px;
+	padding: 10px;
+}
+/*--------------------------- navbar .................................*/
+.logo .img-logo{
+	height: 50px;
+}
+
+.navbar-fixed-top{
+	/*padding-left: 20px;*/
+	padding-right: 20px;
+}
+
+.navbar-brand img{
+	width: 60px;
+}
+
+.navbar-brand{
+	background: #fff;
+}
+
+/*.navbar-brand a:hover{
+	background: #333232;
+}
+*/
+/*.nav .navbar-nav .navbar-right .btn{
+	padding: 5px;
+}*/
+
+/*----------------------------------------------------------------*/
+
+
+/*.row{
+	margin-left: 0;
+	margin-right: 0;
+}*/
+
+.form-horizontal .form-group{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+.footer{
+	text-align: center;
+	padding: 20px;
+}
+
+
+
+.scrollup{
+    width:40px;
+    height:50px;
+    opacity:0.5;
+    bottom:60px;
+    position:fixed;
+    right:30px;
+    text-indent:-999px;
+    background: url('http://i66.tinypic.com/6t3jba.png') no-repeat;
+    display:none;
+    cursor:pointer;
+    z-index: 9999;
+}
+
+/*label strong{
+	color: #0F0F0F;
+}*/
