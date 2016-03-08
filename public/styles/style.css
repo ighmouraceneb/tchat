@@ -6,8 +6,16 @@ html{
    background-size: cover;
 
 
+
 }
 
+
+
+
+
+body{
+  background: none;
+}
 
 .msg{
   margin-top: 10%;
@@ -107,4 +115,55 @@ a:hover{
     .navBarre ul li:hover > ul{
       display: block;
       z-index: 3;
+
     }
+
+
+
+.centered-form{
+  margin-top: 60px;
+}
+
+.centered-form .panel{
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.col-md-4{
+  width: 50%;
+}
+
+.col-md-offset-4 {
+  margin-left: 25%;
+}
+
+
+.texteconnect{
+  margin-top: 25px;
+}
+
+.green{
+  background: #4DB812;
+  border-color: #3B8E0D;
+}
+
+.connectlogin{
+  background: #4DB812;
+  border-color: #3B8E0D;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.connectlogin p{
+text-align: center;
+padding-top: 5px;
+margin-bottom: 5px;
+
+}
+
+.connectlogin a{
+
+color: #FFFFFF;
+}
+
