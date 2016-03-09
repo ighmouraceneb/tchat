@@ -7,7 +7,7 @@ class User
 	// Déclarer les propriétés
 	private $id;
 	private $login;
-	private $password;
+	private $hash;
 	private $date;
 	private $admin;
 
@@ -62,7 +62,7 @@ class User
 			{
 				if ($this->verifPassword($oldPassword))
 				{
-					$this->password = password_hash($newPassword, PASSWORD_BCRYPT, ["cost"=>12]);
+					$this->hash = password_hash($newPassword, PASSWORD_BCRYPT, ["cost"=>12]);
 				}
 			}
 		}
