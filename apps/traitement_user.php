@@ -44,6 +44,7 @@ if (isset($_POST['login'], $_POST['password']))
 
 
 
+
  if ($action == 'logout') 
  {
  	try
@@ -60,5 +61,6 @@ if (isset($_POST['login'], $_POST['password']))
 
 	}
 }
+
 
 ?>

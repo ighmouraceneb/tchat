@@ -290,3 +290,13 @@ color: #FFFFFF;
     text-align: right;
 }
 
+ul{
+list-style-type: none !important;
+}
+
+
+.chat li{
+  border-bottom: 1px solid #C2B4B4;
+  padding-top: 10px;
+  
+}

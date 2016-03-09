@@ -1,7 +1,10 @@
 <?php
 
 
-
+spl_autoload_register(function($class)
+{
+    require('models/'.$class.'.class.php');
+});
 
 session_start();
 
@@ -36,8 +39,10 @@ if (isset($_GET['page']))
 $error = '';
 $traitements_action =  array(
 	'login'=>'user',
+	'edit'=>'message',
 	'logout'=>'user',
 	'register'=>'user'
+
 );
 // var_dump($_POST);
 // exit;
