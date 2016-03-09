@@ -39,7 +39,7 @@ if (isset($_GET['page']))
 $error = '';
 $traitements_action =  array(
 	'login'=>'user',
-	'edit'=>'message'
+	'edit'=>'message',
 	'logout'=>'user',
 	'register'=>'user'
 
