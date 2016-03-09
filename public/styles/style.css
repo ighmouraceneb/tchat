@@ -25,7 +25,7 @@ body{
 /*---------------------NAVBARRE---------------------*/
 
 header .navBarre {
-  background-color: #464646;
+  background-color: #fff;
 }
 /* FIXED NAV HAUT PAGE */
 header .opacity {
@@ -39,11 +39,14 @@ header.tailleFixed {
 } 
 
 header .navBarre ul {
+  
   font-size: 0px;
-  text-decoration: none!important;
+  
 }
 
+
 header .navBarre li{
+
   font-size: 20px;
 }
 
