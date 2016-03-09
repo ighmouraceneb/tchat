@@ -39,8 +39,9 @@ if (isset($_GET['page']))
 $error = '';
 $traitements_action =  array(
 	'login'=>'user',
-	'register'=>'user',
 	'edit'=>'message'
+	'logout'=>'user',
+	'register'=>'user'
 
 );
 // var_dump($_POST);
