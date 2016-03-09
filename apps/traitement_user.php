@@ -42,14 +42,6 @@ if (isset($_POST['login'], $_POST['password']))
 
 
 
-	var_dump($action)
- if ($action == 'logout') 
- {
-	 
-	$_SESSION = array();
-	session_destroy();
-	header('location:home'); 
-	exit;
-}
+
 
 ?>

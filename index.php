@@ -1,11 +1,14 @@
 <?php
 
 
-
+spl_autoload_register(function($class)
+{
+    require('models/'.$class.'.class.php');
+});
 
 session_start();
 
-$db = @mysqli_connect("localhost", "root", "", "tchatchatchat");
+$db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
 
 $page = "home";
 $access_page = ['home'];
@@ -36,7 +39,9 @@ if (isset($_GET['page']))
 $error = '';
 $traitements_action =  array(
 	'login'=>'user',
-	'register'=>'user'
+	'register'=>'user',
+	'edit'=>'message'
+
 );
 // var_dump($_POST);
 // exit;

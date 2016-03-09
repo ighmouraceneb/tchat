@@ -10,11 +10,17 @@ class Message
 
 // Déclarer les méthodes
 	// Liste des getters
+
+
+		public function __construct()
+	{
+		
+	}
 	public function getId()
 	{
 		return $this->id;
 	}
-	public function getId_user()
+	public function getIdUser()
 	{
 		return $this->id_user;
 	}
@@ -32,5 +38,18 @@ class Message
 	{
 		if (strlen($content)  < 2047)
 			$this->content = $content;
+
+		else
+			throw new Exception("Message trop long (2047 caractères maximum)");
 	}
+
+	public function setIdUser($id_user)
+	{
+		
+			$this->id_user = $id_user;
 	
+	}
+
+}
+	
+	?>
