@@ -37,19 +37,28 @@ if (isset($_POST['login'], $_POST['password']))
 	catch (Exception $e)
 	{
 				$error = $e->getMessage();
+
 	}
 }
 
 
 
-	var_dump($action)
+
  if ($action == 'logout') 
  {
+ 	try
+ 	{
 	 
 	$_SESSION = array();
 	session_destroy();
 	header('location:home'); 
 	exit;
+	}
+	catch (Exception $e)
+	{
+		$error = $e->getMessage();
+
+	}
 }
 
 ?>
