@@ -10,15 +10,16 @@ class MessageManager
 		$this->db = $db;
 	}
 
-public function create($content)
+public function create($content, User $user)
 {
-	$message = new Message();
+	$message = new Message($this->db);
 	$message->setContent($content);
+	$message->setUser($user);
 	
 	// AVANT : $content = mysqli_real_escape_string($this->db, $message->getContent());
 	$content = $this->db->quote($message->getContent());
-	
-	$edit = "INSERT INTO message (content, id_user)  VALUES(".$content.", '".$_SESSION['id']."')";
+	$id = intval($message->getUser()->getId());
+	$edit = "INSERT INTO message (content, id_user)  VALUES(".$content.", '".$id."')";
 
 	// var_dump($register);
 	// exit;
@@ -51,7 +52,7 @@ public function getAll()
 
     $messages = [];
      // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
-    while ($message = $res->fetchObject("Message"))
+    while ($message = $res->fetchObject("Message", [$this->db]))
      {
 		 $messages[] = $message;
 	  }

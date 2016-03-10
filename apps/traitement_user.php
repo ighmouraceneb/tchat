@@ -62,5 +62,5 @@ if (isset($_POST['login'], $_POST['password']))
 	}
 }
 
-
+// ORM
 ?>

@@ -5,24 +5,31 @@ class Message
 
 	private $id;
 	private $id_user;
+	private $user;// Propriété calculée -> PAS dans db
 	private $date;
 	private $content;
+	private $db;
 
 // Déclarer les méthodes
 	// Liste des getters
 
 
-		public function __construct()
+	public function __construct($db)
 	{
-		
+		$this->db = $db;
 	}
 	public function getId()
 	{
 		return $this->id;
 	}
-	public function getIdUser()
+	public function getUser()
 	{
-		return $this->id_user;
+		if ($this->user == null)
+		{
+			$manager = new UserManager($this->db);
+			$this->user = $manager->getById($this->id_user);
+		}
+		return $this->user;
 	}
 	public function getDate()
 	{
@@ -43,11 +50,10 @@ class Message
 			throw new Exception("Message trop long (2047 caractères maximum)");
 	}
 
-	public function setIdUser($id_user)
+	public function setUser(User $user)
 	{
-		
-			$this->id_user = $id_user;
-	
+		$this->user = $user;
+		$this->id_user = $user->getId();
 	}
 
 }

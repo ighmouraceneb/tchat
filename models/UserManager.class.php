@@ -76,6 +76,30 @@ $res = $this->db->query($query);
 		else
 			throw new Exception("Erreur interne2");
 	}
+	public function getById($id)
+	{
+// AVANT: $id = mysqli_real_escape_string($this->db, $id);
+$id = intval($id);	
+// AVANT : $query = "SELECT * FROM user WHERE id='".$id."'";
+$query = "SELECT * FROM user WHERE id=".$id;
+
+// AVANT: $res = mysqli_query($this->db, $query);
+$res = $this->db->query($query);
+		if ($res)
+		{
+			// AVANT : $user = mysqli_fetch_object($res, "User");
+			$user = $res->fetchObject("User");
+
+			if ($user)
+			{
+				return $user;
+			}
+			else
+				throw new Exception("Utilisateur non existant");
+		}
+		else
+			throw new Exception("Erreur interne2");
+	}
 
 
 	
