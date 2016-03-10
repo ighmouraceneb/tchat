@@ -1,8 +1,8 @@
 <?php
 
 //traitement inscription au compte//
-require('models/User.class.php');
-require('models/UserManager.class.php');
+// require('models/User.class.php');
+// require('models/UserManager.class.php');
 $userManager = new UserManager($db);
 	
 if (isset($_POST['login'], $_POST['password1'], $_POST['password2']))
