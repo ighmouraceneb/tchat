@@ -1,0 +1,320 @@
+html{ 
+   background: url(../images/bg1.png) no-repeat center fixed ; 
+   
+   margin:0;
+   padding:0;
+   background-size: cover;
+
+
+
+}
+
+
+
+
+
+body{
+  background: none;
+}
+
+.msg{
+  margin-top: 10%;
+  margin-left: 30%;
+  
+}
+/*---------------------NAVBARRE---------------------*/
+
+header .navBarre {
+  background-color: #fff;
+}
+/* FIXED NAV HAUT PAGE */
+header .opacity {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(70,70,70,1.0);
+} 
+header.tailleFixed {
+  height: 155px;
+} 
+
+header .navBarre ul {
+  
+  font-size: 0px;
+  
+}
+
+
+header .navBarre li{
+
+  font-size: 20px;
+}
+
+.navBarre a{
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  
+  display: block;
+  padding: 15px ;
+  font-size: 15px; 
+  border-bottom: 5px solid  rgb(248, 248, 248);
+  
+  width: 200px;
+}
+
+a:hover{
+  color: #555;
+  background: rgb(248, 248, 248);
+  text-decoration: none;
+}
+
+.navBarre li .buttonLogout {
+  text-decoration: none;
+  background-color: #fff;
+
+  color: #ffffff);
+  margin-right: 10px;
+}
+
+.navBarre button {
+  background-color: none;
+  text-decoration: none;
+  border: none;
+}
+
+.navBarre .buttonLogout:hover {
+  color: rgba(229,43,86,1);
+}
+
+.navBarre li .detailProfil {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.navBarre .detailProfil:hover {
+  color: rgba(43,226,184,1);
+}
+/* NAV BARRE MENU DEROULANT */
+    .profilNavbar{
+      margin-left: 50%;
+    }
+
+    .navBarre ul li{
+      position: relative;
+
+    }
+
+    .navBarre ul ul{
+      position: absolute;
+      top: 100%;
+      left: -25px;
+      /*border:1px solid rgba(141,175,214,1);*/
+      display: none;
+      background: 
+    }
+
+    .navBarre ul li:hover > ul{
+      display: block;
+      z-index: 3;
+
+    }
+
+
+
+.centered-form{
+  margin-top: 60px;
+}
+
+.centered-form .panel{
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.col-md-4{
+  width: 50%;
+}
+
+.col-md-offset-4 {
+  margin-left: 25%;
+}
+
+
+.texteconnect{
+  margin-top: 25px;
+}
+
+.green{
+  background: #4DB812;
+  border-color: #3B8E0D;
+}
+
+.connectlogin{
+  background: #4DB812;
+  border-color: #3B8E0D;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.connectlogin p{
+text-align: center;
+padding-top: 5px;
+margin-bottom: 5px;
+
+}
+
+.connectlogin a{
+
+color: #FFFFFF;
+}
+
+.form-style-10 {
+    width:600px;
+    padding:30px;
+    margin:100px auto;
+    background: #FFF;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+    padding: 30px;
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.form-style-10 h1{
+    background: #2A88AD;
+    padding: 20px 30px 15px 30px;
+    margin: -30px -30px 30px -30px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #257C9E;
+}
+.form-style-10 h1 > span{
+    display: block;
+    margin-top: 2px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 label{
+    display: block;
+    font: 13px Arial, Helvetica, sans-serif;
+    color: #888;
+    margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="number"],
+.form-style-10 input[type="search"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 .section{
+    font: normal 20px 'Bitter', serif;
+    color: #2A88AD;
+    margin-bottom: 5px;
+}
+.form-style-10 .section span {
+    background: #2A88AD;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 4px solid #fff;
+    font-size: 14px;
+    margin-left: -45px;
+    color: #fff;
+    margin-top: -3px;
+}
+.form-style-10 button, 
+.form-style-10 input[type="submit"]{
+    background: #2A88AD;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #257C9E;
+    font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="submit"]:hover{
+    background: #2A6881;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+    float: right;
+    width: 255px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #4D4D4D;
+    margin-top: 10px;
+    text-align: right;
+}
+
+ul{
+list-style-type: none !important;
+}
+
+
+.chat li{
+  border-bottom: 1px solid #C2B4B4;
+  padding-top: 10px;
+  
+}
+<<<<<<< HEAD
+=======
+
+/*--------------------------------FOOTER-----------------------------------------*/
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+
+}
+
+
+
+>>>>>>> 99ce172c6b362e7bfab43a80de33bd60c2723407

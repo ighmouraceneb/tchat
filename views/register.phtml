@@ -1,0 +1,64 @@
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default register">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Vous voulez tchater ? Merci de remplir les champs ci-dessous.</h3>
+			 	</div>
+			 			<div class="panel-body ">
+			 			<div><?=$error?></div>
+			    		<form method="POST" role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="login" id="first_name" class="form-control input-sm" placeholder="Login">
+			    					</div>
+			    				</div>
+			    				
+			    			</div>
+
+			    			
+ 
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password1" id="password" class="form-control input-sm" placeholder="Mot de passe">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password2" id="password_confirmation" class="form-control input-sm" placeholder="Confirmation du mot de passe">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			
+
+			    			<div class="valider">
+                                    <button id="singlebutton" value="register" type="submit" name="action" class="btn btn-info btn-block">Valider mon inscription</button>
+                                </div>
+
+
+
+
+
+
+						<div class="texteconnect">
+
+							<p>Vous avez déjà un compte? <br> Connectez vous !</p>
+
+						</div>
+
+			    	
+			    			<div class="connectlogin">
+                                    <p><a href="#">Connexion à mon compte</a></p>
+                                </div>
+
+
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
