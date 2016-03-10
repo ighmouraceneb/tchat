@@ -5,10 +5,19 @@ spl_autoload_register(function($class)
 {
     require('models/'.$class.'.class.php');
 });
-
+$error = '';
 session_start();
 
-$db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
+// AVANT : $db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
+try
+{
+    $db = new PDO('mysql:dbname=tchatchatchat;host=127.0.0.1', 'root', 'troiswa');
+}
+catch (PDOException $e)
+{
+    $error = 'Erreur interne';
+}
+
 
 $page = "home";
 $access_page = ['home'];
@@ -36,7 +45,7 @@ if (isset($_GET['page']))
 	}
 }
 
-$error = '';
+//AVANT: $error = '';
 $traitements_action =  array(
 	'login'=>'user',
 	'edit'=>'message',

@@ -15,15 +15,18 @@ public function create($content)
 	$message = new Message();
 	$message->setContent($content);
 	
-
-	$content = mysqli_real_escape_string($this->db, $message->getContent());
-
-
-	$edit = "INSERT INTO message (content, id_user)  VALUES('".$content."', '".$_SESSION['id']."')";
+	// AVANT : $content = mysqli_real_escape_string($this->db, $message->getContent());
+	$content = $this->db->quote($message->getContent());
+	
+	$edit = "INSERT INTO message (content, id_user)  VALUES(".$content.", '".$_SESSION['id']."')";
 
 	// var_dump($register);
 	// exit;
-	$res = mysqli_query($this->db, $edit);
+
+
+	// AVANT: $res = mysqli_query($this->db, $edit);
+	$res = $this->db->query($edit);
+
 	if ($res)
 		{
 			// $message = $this->getById();
@@ -41,10 +44,14 @@ public function create($content)
 
 public function getAll()
 {
+	// AVANT : $query = "SELECT * FROM message";
 	$query = "SELECT * FROM message";
-    $res = mysqli_query($this->db, $query);
+    // AVANT: $res = mysqli_query($this->db, $query);
+    $res = $this->db->query($query);
+
     $messages = [];
-     while ($message = mysqli_fetch_object($res, 'Message'))
+     // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
+    while ($message = $res->fetchObject("Message"))
      {
 		 $messages[] = $message;
 	  }

@@ -16,13 +16,24 @@ class UserManager
 		$user->setLogin($login);
 		$user->initPassword($password1, $password2);
 
-		$login = mysqli_real_escape_string($this->db, $user->getLogin());
-		$password = mysqli_real_escape_string($this->db, $user->getHash());
+//AVANT :		$login = mysqli_real_escape_string($this->db, $user->getLogin());
+		$login = $this->db->quote($user->getLogin());
 
-		$register = "INSERT INTO user (login, hash) VALUES('".$login."', '".$password."')";
+
+
+//AVANT: 		$password = mysqli_real_escape_string($this->db, $user->getHash());
+		$password = $this->db->quote($user->getHash());
+
+
+
+		$register = "INSERT INTO user (login, hash) VALUES(".$login.", ".$password.")";
 		// var_dump($register);
 		// exit;
-		$res = mysqli_query($this->db, $register);
+
+
+		// AVANT: $res = mysqli_query($this->db, $register);
+		$res = $this->db->query($register);
+
 		if ($res)
 			{
 				$user = $this->getByLogin($user->getLogin());
@@ -43,12 +54,18 @@ class UserManager
 
 	public function getByLogin($login)
 	{
-		$login = mysqli_real_escape_string($this->db, $login);
-		$query = "SELECT * FROM user WHERE login='".$login."'";
-		$res = mysqli_query($this->db, $query);
+// AVANT: $login = mysqli_real_escape_string($this->db, $login);
+$login = $this->db->quote($login);	
+// AVANT : $query = "SELECT * FROM user WHERE login='".$login."'";
+$query = "SELECT * FROM user WHERE login=".$login;
+
+// AVANT: $res = mysqli_query($this->db, $query);
+$res = $this->db->query($query);
 		if ($res)
 		{
-			$user = mysqli_fetch_object($res, "User");
+			// AVANT : $user = mysqli_fetch_object($res, "User");
+			$user = $res->fetchObject("User");
+
 			if ($user)
 			{
 				return $user;
@@ -57,7 +74,7 @@ class UserManager
 				throw new Exception("Utilisateur non existant");
 		}
 		else
-			throw new Exception("Erreur interne");
+			throw new Exception("Erreur interne2");
 	}
 
 
