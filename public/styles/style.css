@@ -300,6 +300,12 @@ list-style-type: none !important;
   padding-top: 10px;
   
 }
+.panel-primary{
+  border: 1px solid #000;
+}
+.panel-heading{
+  
+}
 
 /*--------------------------------FOOTER-----------------------------------------*/
 .footer{
