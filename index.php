@@ -21,7 +21,7 @@ catch (PDOException $e)
 
 $page = "home";
 $access_page = ['home'];
-$access_page_log = [ 'profil', 'message' ];
+$access_page_log = [ 'profil', 'message', 'displayMessage'];
 
 
 if (isset($_GET['page']))
@@ -64,6 +64,10 @@ if (isset($_POST['action']))
 	}
 	 
 }
+
+if (isset($_GET['ajax']))
+	require('apps/'.$page.'.php');
+else
 
 require('apps/skel.php');
 
