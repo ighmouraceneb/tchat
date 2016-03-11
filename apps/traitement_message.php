@@ -2,16 +2,16 @@
 
 
 //traitement inscription au compte//
-
 $messageManager = new MessageManager($db);
 if (isset($_POST['content'], $_SESSION['id']))
+
 {
 	try
 	{
 		$manager = new UserManager($db);
 		$user = $manager->getById($_SESSION['id']);
 		$content = $messageManager->create($_POST['content'], $user);
-	
+	   var_dump($_POST);
 		header('Location: message');
 		exit;
 				

@@ -14,7 +14,7 @@ session_start();
 // AVANT : $db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
 try
 {
-    $db = new PDO('mysql:dbname=tchatchatchat;host=127.0.0.1', 'root', '');
+    $db = new PDO('mysql:dbname=tchatchatchat;host=127.0.0.1', 'root', 'troiswa');
 }
 catch (PDOException $e)
 {
@@ -25,7 +25,7 @@ catch (PDOException $e)
 
 $page = "home";
 $access_page = ['home'];
-$access_page_log = [ 'profil', 'message' ];
+$access_page_log = [ 'profil', 'message' , 'displayMessage'];
 if (isset($_GET['page']))
 {
 	if (in_array($_GET['page'], $access_page))
@@ -68,7 +68,6 @@ if (isset($_POST['action']))
 	}
 	 
 }
-
 if (isset($_GET['ajax']))
  	require('apps/'.$page.'.php');
  else

@@ -1,20 +1,20 @@
 function refresh()
  {
- 	$.get('index.php?page=list&ajax', function(html)
+ 	$.get('index.php?page=displayMessage&ajax', function(html)
  	{
  		$('.js_list').html(html);
  	});
  }
  
- $('document').ready(function()
+ $(function()
  {
  	$('.js_form').submit(function(info)
  	{
  		info.preventDefault();
-		var message = $('.js_in').val();
- 		$.post('tchat', {content:message,action:"sendMessage"}, function()
+		var message = $('.js_input').val();
+ 		$.post('message', {content:message,action:"edit"}, function()
  		{
- 			$('.js_in').val('').focus();
+ 			$('.js_input').val('').focus();
  			refresh();
  		});
  		return false;
@@ -23,3 +23,5 @@ function refresh()
  	{
  		refresh();
  	}, 1000);
+
+ }); 
