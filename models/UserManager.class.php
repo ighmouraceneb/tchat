@@ -102,7 +102,21 @@ $res = $this->db->query($query);
 	}
 
 
-	
+public function getAll()
+{
+	// AVANT : $query = "SELECT * FROM message";
+	$query = "SELECT * FROM user";
+    // AVANT: $res = mysqli_query($this->db, $query);
+    $res = $this->db->query($query);
+
+    $users = [];
+     // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
+    while ($user = $res->fetchObject("User"))
+     {
+		 $users[] = $user;
+	  }
+	  return $users;
+}	
 
 
 }
