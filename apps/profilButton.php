@@ -1,7 +1,2 @@
-<li class="col-xs-12 col-sm-12 col-lg-2 col-lg-offset-2 profilNavbar">
-	<a class="profilButton"><!-- <?=htmlentities($login)?> -->Bonjour</a>	
-	<ul>
-		<li><a href="profil" class="detailProfil">Mon compte</a></li>
-		<?php require('apps/formulaireDeconnection.php'); ?>
-	</ul>
-</li>
+
+		<?php require('views/profilButton.phtml'); ?>
