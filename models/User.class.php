@@ -6,12 +6,10 @@ class User
 	private $hash;
 	private $date;
 	private $admin;
-
 	public function __construct()
 	{
 		
 	}
-
 	public function getId()
 	{
 		return $this->id;
@@ -32,7 +30,6 @@ class User
 	{
 		return $this->admin;
 	}
-
 	public function setLogin($login)
 	{
 		if (strlen($login) > 3 && strlen($login) < 31)
@@ -47,7 +44,6 @@ class User
 		else
 			throw new Exception("Admin incorrect (doit être égal à true ou false)");
 	}
-
 	public function verifPassword($password)
 	{
 		if (!password_verify($password, $this->hash))

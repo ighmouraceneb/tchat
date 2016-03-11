@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -5,6 +6,9 @@ spl_autoload_register(function($class)
 {
     require('models/'.$class.'.class.php');
 });
+
+
+
 $error = '';
 session_start();
 
@@ -19,11 +23,10 @@ catch (PDOException $e)
 }
 
 
+
 $page = "home";
 $access_page = ['home'];
-$access_page_log = [ 'profil', 'message', 'displayMessage'];
-
-
+$access_page_log = [ 'profil', 'message' , 'displayMessage'];
 if (isset($_GET['page']))
 {
 	if (in_array($_GET['page'], $access_page))
@@ -45,7 +48,9 @@ if (isset($_GET['page']))
 	}
 }
 
+
 //AVANT: $error = '';
+
 $traitements_action =  array(
 	'login'=>'user',
 	'edit'=>'message',
@@ -64,14 +69,10 @@ if (isset($_POST['action']))
 	}
 	 
 }
-
 if (isset($_GET['ajax']))
-	require('apps/'.$page.'.php');
-else
-
-require('apps/skel.php');
-
-
+ 	require('apps/'.$page.'.php');
+ else
+  require('apps/skel.php');
 
 
 

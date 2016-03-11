@@ -1,19 +1,14 @@
 <?php
-
 class Message
 {
-
 	private $id;
 	private $id_user;
 	private $user;// Propriété calculée -> PAS dans db
 	private $date;
 	private $content;
 	private $db;
-
 // Déclarer les méthodes
 	// Liste des getters
-
-
 	public function __construct($db)
 	{
 		$this->db = $db;
@@ -39,23 +34,19 @@ class Message
 	{
 		return $this->content;
 	}
-
 	// Liste des setters
 	public function setContent($content)
 	{
 		if (strlen($content)  < 2047)
 			$this->content = $content;
-
 		else
 			throw new Exception("Message trop long (2047 caractères maximum)");
 	}
-
 	public function setUser(User $user)
 	{
 		$this->user = $user;
 		$this->id_user = $user->getId();
 	}
-
 }
 	
 	?>
