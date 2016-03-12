@@ -15,7 +15,7 @@ session_start();
 // AVANT : $db = @mysqli_connect("localhost", "root", "troiswa", "tchatchatchat");
 try
 {
-    $db = new PDO('mysql:dbname=tchatchatchat;host=127.0.0.1', 'root', 'troiswa');
+    $db = new PDO('mysql:dbname=tchatchatchat;host=127.0.0.1', 'root', '');
 }
 catch (PDOException $e)
 {
