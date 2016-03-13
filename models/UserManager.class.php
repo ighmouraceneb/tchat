@@ -114,7 +114,7 @@ $res = $this->db->query($query);
 	    if ($res) 
 	     // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
 	    {
-	    	while ($user = $res->fetchObject("User"))
+	    	while ($user = $res->fetchObject("User", [$this->db]))
 		     {
 				 $users[] = $user;
 			  }
