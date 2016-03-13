@@ -1,8 +1,4 @@
 <?php 
 $manager = new UserManager($db);
-$manager->editDate($_SESSION['id']);
-
-
-
-$list = $manager-> getUserConnect();
+$list = $manager-> getAll();
 require('views/userconnected.phtml'); ?>

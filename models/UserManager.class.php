@@ -102,29 +102,15 @@ $res = $this->db->query($query);
 	}
 
 
-// public function getAll()
-// {
-// 	// AVANT : $query = "SELECT * FROM message";
-// 	$query = "SELECT * FROM user";
-//     // AVANT: $res = mysqli_query($this->db, $query);
-//     $res = $this->db->query($query);
+	
 
-//     $users = [];
-//      // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
-//     while ($user = $res->fetchObject("User"))
-//      {
-// 		 $users[] = $user;
-// 	  }
-// 	  return $users;
-// }	
-
-	public function getUserConnect()
+	public function getAll()
 	{
 		// AVANT : $query = "SELECT * FROM message";
 		$query = "SELECT * FROM user WHERE date>CURRENT_TIMESTAMP-5";
 	    // AVANT: $res = mysqli_query($this->db, $query);
 	    $res = $this->db->query($query);
-
+	     $users = [];
 	    if ($res) 
 	     // AVANT : while ($message = mysqli_fetch_object($res, 'Message'))
 	    {
@@ -146,7 +132,7 @@ $res = $this->db->query($query);
 public function editDate($id)
 {
 	$id = intval ($id);
-	$query = "UPDATE user SET date=CURRENT_TIMESTAMP WHERE id_user='".$id."'";
+	$query = "UPDATE user SET date=CURRENT_TIMESTAMP WHERE id='".$id."'";
 	$res = $this->db->exec($query);
 
 }
